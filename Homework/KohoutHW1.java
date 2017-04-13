@@ -29,12 +29,12 @@ public class KohoutHW1{
 	}
 	
 	public static double sinCalc(double xVar){
-		double sinOfX = Math.toRadians(xVar);
+		double sinOfX = xVar;
 		double[] taylorArray = new double[32];
 		double factorial = 1;
 		for(int i = 1; i <= 31; i ++){
 			taylorArray[i] = (Math.pow(sinOfX, i)/(factorial *= i));
-			factorial *= i;
+			//factorial *= i;
 			
 			//double sign = Math.pow(-1, i);
 			//sinOfX += (Math.pow(xVar, i)/factorial(i));
