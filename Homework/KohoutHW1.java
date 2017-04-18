@@ -33,14 +33,14 @@ public class KohoutHW1 {
 	/*
 	 * Calculates e^x when x is passed as an integer value.
 	 * 
-	 * @param xVar 		value used in the calculation for the exponent of e
+	 * @param xVar 		value used as the exponent for the calculation of e^x
 	 * @return eToX 	returned calculation of e^x
 	 */
 	public static double eCalc(int xVar) {
 		// Start of Taylor series calculation, adding 1 and x^1
 		double eToX = 1 + xVar;
 		double factorial = 1;
-		// Taylor series calculation done by looping through 1 to 14, adding the total to factorial accumulator.
+		// Taylor series calculation done by looping through 2 to 14, adding the total to factorial accumulator.
 		for (int i = 2; i < 15; i++) {
 			eToX += (Math.pow(xVar, i) / (factorial *= i));
 		}
@@ -58,7 +58,7 @@ public class KohoutHW1 {
 		double factorial = 1;
 		// Used to alternate the sign
 		int sign = 1;
-		// Start of Taylor series calculation, starting with x^1 and adding only odd iterations to the accumulator, alternating sign
+		// Start of Taylor series calculation, starting with x^1/1! and adding only odd iterations to the accumulator, alternating sign
 		for (int i = 1; i <= 29; i += 2) {
 			factorial = 1;
 			// Calculates factorial based on given odd value of i, up to and including i
