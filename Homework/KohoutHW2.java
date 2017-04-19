@@ -1,5 +1,6 @@
 /**
- * KohoutHW2 - drawing panel which displays a series of squares in a pattern
+ * KohoutHW2 - drawing panels which display 2 graphics. First a custom graphic
+ * and the second a series of squares in a pattern
  *
  * Evan Kohout
  * 2017-04-14
