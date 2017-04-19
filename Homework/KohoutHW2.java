@@ -102,9 +102,27 @@ public class KohoutHW2{
 	public static void part2(){
 		DrawingPanel panel = new DrawingPanel(1000, 850);
 		Graphics g = panel.getGraphics();
-		panel.setBackground( Color.decode("0xF2E0F7"));
+		panel.setBackground( Color.decode("#ff1795"));
 
-		rect(4, 300, 300, g);
+		rect(3, 60, 60, g);
+		rect(5, 525, 650, g);
+		rect(15, 800, 525, g);
+		
+		triangle(12, 300, 225, 3, g);
+		triangle(6, 250, 575, 5, g);
+		triangle(4, 790, 80, 6, g);
+	}
+	
+	public static void triangle(int levels, int x, int y, int rows, Graphics g){
+		for(int i = 1; i <= rows; i++){
+			int x1 = x;
+			for(int j = 1; j <= i; j++){
+				rect(levels, x1, y, g);
+				x1 += (levels * square) * 2;
+			}
+			x -= levels * square;
+			y += levels * square;
+		}
 	}
 	
 	public static void rect(int levels, int x, int y, Graphics g){
@@ -152,11 +170,9 @@ public class KohoutHW2{
 			g.drawRect(x3, y3, squareX2, squareY2);
 			g.drawRect(x4, y4, squareY2, squareX2);
 			
-			squareX2 = square;
-			squareY2 -= square * 2;
-			//x3 -= square;
+			squareX2 += square * 2;
+			squareY2 = square;
 			y3 += square;
-			//x4 -= square;
 			
 		}
 
