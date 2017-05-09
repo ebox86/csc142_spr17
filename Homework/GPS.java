@@ -88,7 +88,4 @@ public class GPS {
 	public String toString(){
 		return "x = " + currentLoc.getX() + ", y = " + currentLoc.getY() + ", heading = " + heading.getHeading();
 	}
-		
-		
-	}
 }
