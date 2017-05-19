@@ -17,11 +17,11 @@ public class SensorArray {
 	
 	// ~~ methods ~~ //
 	
-	public String getDate(){
-		return this.date;
+	public static String getDate(){
+		return date;
 	}
 	
-	public ColorSensor longest(){
+	public static ColorSensor longest(){
 		ColorSensor maxTime = csArr[0];
 		for(int i = 1; i < csArr.length; i++){
 			if(csArr[i].getTime() > maxTime.getTime()){
@@ -31,7 +31,7 @@ public class SensorArray {
 		return maxTime;
 	}
 	
-	public int[] timeChange(){
+	public static int[] timeChange(){
 		int[] diff = null;
 		for(int i = 0; i < csArr.length - 1; i++){
 			int d1 = csArr[i].getTime();
@@ -41,7 +41,7 @@ public class SensorArray {
 		return diff;
 	}
 	
-	public ColorSensor[] getClosest(){
+	public static ColorSensor[] getClosest(){
 		ColorSensor[] closeArr = null;
 		double testVal = csArr[0].getBrightness() - csArr[1].getBrightness();
 		for(int i = 0; i < csArr.length; i++){
@@ -57,20 +57,25 @@ public class SensorArray {
 	
 	public static void load(Scanner source){
 		int line = 0;
+		System.out.println(source.toString());
 		while (source.hasNext()){
-            String s = source.next();
+			System.out.println("loop");
+            String s = source.nextLine();
             if(line < 1){
             	date = s;
+            } else {
+	            String[] lineData = s.split("\\s");
+	            Color c = new Color(Integer.parseInt(lineData[1]), Integer.parseInt(lineData[2]), Integer.parseInt(lineData[3]));
+	            ColorSensor cs = new ColorSensor(lineData[0], c, Integer.parseInt(lineData[4]));
+	            System.out.println(cs.toString());
+	            csArr[line - 1] = cs;
             }
-            String[] lineData = s.split("\\t");
-            Color c = new Color(Integer.parseInt(lineData[1]), Integer.parseInt(lineData[2]), Integer.parseInt(lineData[3]));
-            ColorSensor cs = new ColorSensor(lineData[0], c, Integer.parseInt(lineData[4]));
-            csArr[line] = cs;
             line++;
 		}
+		source.close();
 	}
 	
-	public ColorSensor findSensor(String name){
+	public static ColorSensor findSensor(String name){
 		ColorSensor cs = null;
 		for(int i = 0; i < csArr.length; i++){
 			if(csArr[i].getName() == name){

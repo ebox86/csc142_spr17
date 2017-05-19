@@ -56,7 +56,7 @@ public class ColorSensor {
 	// ~~ methods ~~ //
 	
 	public String toString(){
-		return String.format("%s (%i, %i, %i):%i", this.sensorName, this.c.getRed(), this.c.getGreen(), this.c.getBlue(), this.time);
+		return String.format("%s (%d, %d, %d):%d", this.sensorName, this.c.getRed(), this.c.getGreen(), this.c.getBlue(), this.time);
 	}
 	
 }
