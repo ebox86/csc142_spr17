@@ -3,9 +3,9 @@ import java.awt.Color;
 public class ColorSensor {
 
 	// ~~ attributes ~~ //
-	Color c;
-	String sensorName;
-	int time;
+	private Color c;
+	private String sensorName;
+	private int time;
 	
 	// ~~ constructor ~~ //
 	
