@@ -1,4 +1,6 @@
 import java.awt.Color;
+import java.awt.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -6,7 +8,7 @@ public class SensorArray {
 
 	// ~~ attributes ~~ //
 	
-	private static ColorSensor[] csArr;
+	private static ColorSensor[] csArr = new ColorSensor[21];
 	private static String date;
 	
 	// ~~ constructor ~~ //
@@ -80,23 +82,19 @@ public class SensorArray {
 	 * @param source -- the scanner used for file input
 	 */
 	public static void load(Scanner source){
-		csArr = null;
 		int line = 0;
-		System.out.println(source.toString());
 		while (source.hasNext()){
-			System.out.println("loop");
             String s = source.nextLine();
             if(line < 1){
             	date = s;
             } else {
+            }
 	            String[] lineData = s.split("\\s");
 	            Color c = new Color(Integer.parseInt(lineData[1]), Integer.parseInt(lineData[2]), Integer.parseInt(lineData[3]));
 	            ColorSensor cs = new ColorSensor(lineData[0], c, Integer.parseInt(lineData[4]));
-	            System.out.println(s.toString());
 	            csArr[line - 1] = cs;
             }
             line++;
-		}
 		source.close();
 	}
 	
