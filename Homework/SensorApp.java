@@ -2,7 +2,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-
+/**
+ * SensorArray object -- used to build an array and store multiple ColorSensor objects for the physics department
+ * @author Evan Kohout
+ * 
+ *
+ * EXTRA CREDIT:
+ * Making methods and variables private or public is done so because of the software paradigm of information hiding outlines that you 
+ * should hide the implementation details of your public classes and methods.
+ */
 public class SensorApp {
 
 	private static SensorArray sensorArr;
