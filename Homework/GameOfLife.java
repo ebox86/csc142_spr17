@@ -135,7 +135,11 @@ public class GameOfLife {
      * Clear all the cells, set them to DEAD.
      */
     public void clear() {
-        // your code appears here
+        for(int row = 0; row < board[0].length; row++){
+        	for(int col = 0; col < board.length; col++){
+        		setDead(row, col);
+        	}
+        }
     }
     
     /**
@@ -145,6 +149,27 @@ public class GameOfLife {
         System.out.println(toString());
     }
     
+    
+    /**
+     * overrides toString method to return a string representation of the board
+     */
+    public String toString() {
+    	StringBuilder sb = new StringBuilder();
+        for(int row = 0; row < board[0].length; row++){
+        	for(int col = 0; col < board.length; col++){
+        		if(board[row][col] == ALIVE){
+        			sb.append("O ");
+        		} else {
+        			sb.append(". ");
+        		}
+        	}
+        	sb.append("\n");
+        }
+        return sb.toString();
+    }
+
+
+    
     /**
      * This method updates the current board for the
      * next generation. 
@@ -152,7 +177,14 @@ public class GameOfLife {
      * within this method.
      */
     public void nextGeneration() {
-        // your code appears here
+    	int[] prev, cur;
+        for(int row = 1; row < BOARD_SIZE; row ++){
+        	prev = board[row - 1];
+        	cur = board[row];
+        	for(int col = 1; col < BOARD_SIZE; col ++){
+        		
+        	}
+        }
     }
     
     /**
