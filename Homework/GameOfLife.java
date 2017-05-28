@@ -9,7 +9,7 @@ public class GameOfLife {
     
     // declaration for the game of life board
     private int[][] board;
-    
+	private int[] prev, cur;
     /**
      * The value indicating a dead cell
      */
@@ -177,12 +177,29 @@ public class GameOfLife {
      * within this method.
      */
     public void nextGeneration() {
-    	int[] prev, cur;
-        for(int row = 1; row < BOARD_SIZE; row ++){
+    	int count;
+    	// row traversal
+        for(int row = 1; row <= BOARD_SIZE; row ++){
         	prev = board[row - 1];
         	cur = board[row];
-        	for(int col = 1; col < BOARD_SIZE; col ++){
-        		
+        	// column traversal
+        	for(int col = 1; col <= BOARD_SIZE; col ++){
+        		count = 0;
+        		// neighbor traversal
+        		for(int i = -1; i <= 1; i++){
+        			if(prev[row + i] == ALIVE){
+        				count++;
+        			}
+        			if(cur[row + i] == ALIVE){
+        				count++;
+        			}
+        			if(board[row + 1][row + i] == ALIVE){
+        				count++;
+        			}
+        		}
+        		if(board[row][col] == DEAD && count >= 3){
+        			board[row][col] = ALIVE;
+        		}
         	}
         }
     }
