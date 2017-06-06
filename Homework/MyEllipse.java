@@ -5,7 +5,6 @@ public class MyEllipse extends MyShape {
 		super(h, w);
 	}
 
-	@Override
 	public double getArea() {
 		// TODO Auto-generated method stub
 		return 0;
