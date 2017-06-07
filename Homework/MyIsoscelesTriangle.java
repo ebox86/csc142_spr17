@@ -1,11 +1,11 @@
 /**
  * MyIsoscelesTriangle -- creates a new MyIsoscelesTriangle object as a child of
- * MyShape
+ * MyTriangle
  * 
  * @author evan kohout
  *
  */
-public class MyIsoscelesTriangle extends MyRightTriangle {
+public class MyIsoscelesTriangle extends MyTriangle {
 
 	// ~~ constructor ~~ //
 
@@ -19,7 +19,6 @@ public class MyIsoscelesTriangle extends MyRightTriangle {
 	 */
 	public MyIsoscelesTriangle(int h, int w) {
 		super(h, w);
-
 	}
 
 	// ~~ accessors ~~ //
@@ -33,20 +32,10 @@ public class MyIsoscelesTriangle extends MyRightTriangle {
 	}
 
 	/**
-	 * Returns the area of the MyIsoscelesTriangle object
-	 * @return the area of the triangle
-	 */
-	public double getArea() {
-		// side length is height
-		return width * (Math.sqrt((4 * Math.pow(height, 2)) - (Math.pow(height, 2)))/4);
-	}
-
-	/**
 	 * Returns the perimeter of the MyIsoscelesTriangle object
 	 * @return the perimeter of the triangle
 	 */
 	public double getPerimeter() {
-		// side length is height
-		return (2 * height) + width;
+		return width + Math.sqrt(Math.pow(width, 2) + (4 * Math.pow(height, 2)));
 	}
 }

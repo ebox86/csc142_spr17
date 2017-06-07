@@ -43,7 +43,7 @@ public class MyEllipse extends MyShape {
 	 * @return the perimeter of the ellipse
 	 */
 	public double getPerimeter() {
-		return 0.5 * Math.PI * ((3 * (height * width)) - Math.sqrt((3 * height + width) * (height + 3 * width)));
+		return 0.5 * Math.PI * ((3 * (height + width)) - Math.sqrt((3 * height + width) * (height + 3 * width)));
 	}
 
 }

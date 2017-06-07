@@ -59,14 +59,14 @@ public abstract class MyShape {
 	/**
 	 * Returns the area of the MyShape object
 	 * 
-	 * @return
+	 * @return area -- the area of the shape
 	 */
 	public abstract double getArea();
 
 	/**
 	 * Returns the perimeter of the MyShape object
 	 * 
-	 * @return
+	 * @return perimeter -- the perimeter of the shape
 	 */
 	public abstract double getPerimeter();
 
