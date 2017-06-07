@@ -26,6 +26,7 @@ public class MyTriangle extends MyShape {
 	 * Returns the area of the MyTriangle object
 	 */
 	public double getArea() {
+		// height multiplied by width divided by 2
 		return 0.5 * width * height;
 	}
 
@@ -40,9 +41,8 @@ public class MyTriangle extends MyShape {
 	 * Returns the perimeter of the MyTriangle object
 	 */
 	public double getPerimeter() {
-		double hypotenuse = Math.pow(Math.pow(width, 2) + Math.pow(height, 2), 0.5);
-		return width + height + hypotenuse;
-
+		// adds both known sides of triangle to the hypotenuse
+		return width + height + Math.sqrt((width * width) + (height * height));
 	}
 
 }

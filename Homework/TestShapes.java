@@ -48,11 +48,30 @@ public class TestShapes {
 				// create a MyCircle
 				height = getInt("Enter the diameter: ");
 				shape = new MyCircle(height);
-			} else if (input == 5) {
-				// create a MyTriangle
+			//  commenting out MyTriangle to omit it from standard version
+			//
+			//} else if (input == 5) {
+			//	// create a MyTriangle
+			//	height = getInt("Enter the height: ");
+			//	width = getInt("Enter the width: ");
+			//	shape = new MyTriangle(height, width);
+			//
+			//  adding options for challenge version
+			} else if (input == 6) {
+				// create a MyRightTriangle
 				height = getInt("Enter the height: ");
 				width = getInt("Enter the width: ");
-				shape = new MyTriangle(height, width);
+				shape = new MyRightTriangle(height, width);
+			} else if (input == 7) {
+				// create a MyIsoscelesTriangle
+				height = getInt("Enter the side: ");
+				width = getInt("Enter the width: ");
+				shape = new MyIsoscelesTriangle(height, width);
+			} else if (input == 8) {
+				// create a MyRhombus
+				height = getInt("Enter the diagonal height: ");
+				width = getInt("Enter the diagonal width: ");
+				shape = new MyRhombus(height, width);
 			} else {
 				// unrecognized menu option
 				shape = null;
@@ -91,10 +110,12 @@ public class TestShapes {
 		System.out.println("   2. Create a MySquare");
 		System.out.println("   3. Create a MyEllipse");
 		System.out.println("   4. Create a MyCircle");
-		System.out.println("   5. Create a MyTriangle");
-		// System.out.println(" 6. Create a MyRightTriangle");
-		// System.out.println(" 7. Create a MyIsoscelesTriangle");
-		// System.out.println(" 8. Create a MyRhombus");
+		// commenting out MyTriangle from Standard version
+		// System.out.println("   5. Create a MyTriangle");
+		// adding options for Challenge version
+		System.out.println("   6. Create a MyRightTriangle");
+		System.out.println("   7. Create a MyIsoscelesTriangle");
+		System.out.println("   8. Create a MyRhombus");
 		System.out.println("   0. Exit TestShapes");
 
 		// get the input

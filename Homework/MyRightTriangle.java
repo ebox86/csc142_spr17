@@ -1,9 +1,9 @@
 /**
- * MyRightTriangle -- creates a new MyRightTriangle object as a child of MyShape
+ * MyRightTriangle -- creates a new MyRightTriangle object as a child of MyTriangle
  * @author Evan Kohout
  *
  */
-public class MyRightTriangle extends MyShape {
+public class MyRightTriangle extends MyTriangle {
 	
 	// ~~ constructor ~~ //
 
@@ -20,28 +20,12 @@ public class MyRightTriangle extends MyShape {
 	}
 
 	// ~~ accessors ~~ //
-
-	/**
-	 * Returns the area of the MyRightTriangle object
-	 */
-	public double getArea() {
-		return 0.5 * width * height;
-	}
-
 	/**
 	 * Returns the name of the shape
+	 * @return the name of the shape
 	 */
 	public String getName() {
 		return "right triangle";
-	}
-
-	/**
-	 * Returns the perimeter of the MyRightTriangle object
-	 */
-	public double getPerimeter() {
-		double hypotenuse = Math.pow(Math.pow(width, 2) + Math.pow(height, 2), 0.5);
-		return width + height + hypotenuse;
-
 	}
 
 }

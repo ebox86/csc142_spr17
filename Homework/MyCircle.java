@@ -23,6 +23,7 @@ public class MyCircle extends MyEllipse {
 
 	/**
 	 * Returns the area of the MyCircle object
+	 * @return the area of the circle
 	 */
 	public double getArea() {
 		return 0.25 * Math.PI * Math.pow(width, 2);
@@ -30,6 +31,7 @@ public class MyCircle extends MyEllipse {
 
 	/**
 	 * Returns the name of the shape
+	 * @return the name of the shape
 	 */
 	public String getName() {
 		return "circle";
@@ -37,6 +39,7 @@ public class MyCircle extends MyEllipse {
 
 	/**
 	 * Returns the perimeter of the MyCircle object
+	 * @return the perimeter of the circle
 	 */
 	public double getPerimeter() {
 		double r = width / 2;

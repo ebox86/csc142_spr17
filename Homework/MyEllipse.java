@@ -24,6 +24,7 @@ public class MyEllipse extends MyShape {
 
 	/**
 	 * Returns the area of the MyEllipse object
+	 * @return the are of the ellipse
 	 */
 	public double getArea() {
 		return 0.25 * Math.PI * (height * width);
@@ -31,6 +32,7 @@ public class MyEllipse extends MyShape {
 
 	/**
 	 * Returns the name of the shape
+	 * @return the name of the shape
 	 */
 	public String getName() {
 		return "ellipse";
@@ -38,6 +40,7 @@ public class MyEllipse extends MyShape {
 
 	/**
 	 * Returns the perimeter of the ellipse
+	 * @return the perimeter of the ellipse
 	 */
 	public double getPerimeter() {
 		return 0.5 * Math.PI * ((3 * (height * width)) - Math.sqrt((3 * height + width) * (height + 3 * width)));

@@ -24,22 +24,27 @@ public class MyRectangle extends MyShape {
 
 	/**
 	 * Returns the name of the shape
+	 * @return the name of the shape
 	 */
 	public String getName() {
 		return "rectangle";
 	}
 
 	/**
-	 * Returns the area of the rectangle
+	 * Returns the area of the MyRectangle object
+	 * @return the area of the rectangle
 	 */
 	public double getArea() {
+		// height multiplied by width
 		return width * height;
 	}
 
 	/**
-	 * Returns the perimeter of the rectangle
+	 * Returns the perimeter of the MyRectangle object
+	 * @return the perimeter of the rectangle
 	 */
 	public double getPerimeter() {
+		// height added to width multiplied by 2
 		return 2 * (width + height);
 	}
 }
