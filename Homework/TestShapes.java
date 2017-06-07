@@ -39,16 +39,34 @@ public class TestShapes {
 				// create a MySquare
 				height = getInt("Enter the side: ");
 				shape = new MySquare(height);
+			} else if (input == 3) {
+				// create a MyEllipse
+				height = getInt("Enter the height: ");
+				width = getInt("Enter the width: ");
+				shape = new MyEllipse(height, width);
+			} else if (input == 4) {
+				// create a MyCircle
+				height = getInt("Enter the diameter: ");
+				shape = new MyCircle(height);
+			} else if (input == 5) {
+				// create a MyTriangle
+				height = getInt("Enter the height: ");
+				width = getInt("Enter the width: ");
+				shape = new MyTriangle(height, width);
 			} else {
 				// unrecognized menu option
 				shape = null;
 			}
-			if (shape != null) {
-				// output shape information
-				System.out.println("You created a " + shape.getName() + ", that is " + shape.getWidth() + " by "
-						+ shape.getHeight() + ".");
-				System.out.println("  Its area is " + shape.getArea() + ".");
-			} else {
+			if(shape != null) {
+				  // output shape information
+				  System.out.println("You created a " + 
+				    shape.getName() + " that is " + 
+				    shape.getWidth() + " by " + 
+				    shape.getHeight() + ".");
+				  System.out.println(" Its area is " + 
+				    shape.getArea() + "; its perimeter is " +
+				    shape.getPerimeter() + ".");
+				} else {
 				// report the error
 				System.out.println("Error in menu selection.");
 			}
@@ -71,9 +89,9 @@ public class TestShapes {
 		System.out.println("Select from the following options:");
 		System.out.println("   1. Create a MyRectangle");
 		System.out.println("   2. Create a MySquare");
-		// System.out.println(" 3. Create a MyEllipse");
-		// System.out.println(" 4. Create a MyCircle");
-		// System.out.println(" 5. Create a MyTriangle");
+		System.out.println("   3. Create a MyEllipse");
+		System.out.println("   4. Create a MyCircle");
+		System.out.println("   5. Create a MyTriangle");
 		// System.out.println(" 6. Create a MyRightTriangle");
 		// System.out.println(" 7. Create a MyIsoscelesTriangle");
 		// System.out.println(" 8. Create a MyRhombus");
