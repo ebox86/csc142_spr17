@@ -1,16 +1,18 @@
 /**
  * MyCircle -- creates a MyCircle object as a child of MyEllipse of MyShape
+ * 
  * @author Evan kohout
  *
  */
 public class MyCircle extends MyEllipse {
 
 	// ~~ constructor ~~ //
-	
+
 	/**
-	 * Constructs the MyEllipse object
-	 * @param h -- height of the ellipse
-	 * @param w -- width of the ellipse
+	 * Constructs the MyCicle object
+	 * 
+	 * @param diameter
+	 *            -- diameter of the circle
 	 */
 	public MyCircle(int diameter) {
 		super(diameter, diameter);
@@ -18,25 +20,26 @@ public class MyCircle extends MyEllipse {
 	}
 
 	// ~~ accessors ~~ //
-	
+
 	/**
 	 * Returns the area of the MyCircle object
 	 */
 	public double getArea() {
-		double area = (1/4) * Math.PI * Math.pow(width, 2);
-		return area;
+		return 0.25 * Math.PI * Math.pow(width, 2);
 	}
-	
+
 	/**
 	 * Returns the name of the shape
 	 */
 	public String getName() {
 		return "circle";
 	}
-	
-	@Override
+
+	/**
+	 * Returns the perimeter of the MyCircle object
+	 */
 	public double getPerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		double r = width / 2;
+		return 2 * Math.PI * r;
 	}
 }

@@ -64,8 +64,8 @@ public class TestShapes {
 				    shape.getWidth() + " by " + 
 				    shape.getHeight() + ".");
 				  System.out.println(" Its area is " + 
-				    shape.getArea() + "; its perimeter is " +
-				    shape.getPerimeter() + ".");
+				    String.format("%.3f", shape.getArea()) + "; its perimeter is " +
+				    String.format("%.3f", shape.getPerimeter()) + ".");
 				} else {
 				// report the error
 				System.out.println("Error in menu selection.");

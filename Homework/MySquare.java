@@ -1,34 +1,42 @@
 /**
  * MySquare -- creates a square object as a child of MyRectangle of MyShape
+ * 
  * @author evan kohout
  *
  */
 public class MySquare extends MyRectangle {
-	
+
 	// ~~ constructor ~~ //
-	
+
 	/**
 	 * This constructs the MySquare object
+	 * 
 	 * @param side
 	 */
 	public MySquare(int side) {
 		super(side, side);
 	}
-	
+
 	// ~~ accessors ~~ //
-	
+
+	/**
+	 * Returns the name of the shape
+	 */
 	public String getName() {
 		return "square";
 	}
-	
-	public double getArea(){
-		double area = width * width;
-		return area;
+
+	/**
+	 * Returns the area of the square
+	 */
+	public double getArea() {
+		return width * width;
 	}
-	
-	@Override
+
+	/**
+	 * Returns the perimeter of the square
+	 */
 	public double getPerimeter() {
-		double perimeter = 4 * width;
-		return perimeter;
+		return 4 * width;
 	}
 }

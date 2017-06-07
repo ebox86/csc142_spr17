@@ -7,6 +7,8 @@
  */
 public abstract class MyShape {
 
+	// ~~ fields ~~ //
+
 	protected int height;
 	protected int width;
 
@@ -16,9 +18,9 @@ public abstract class MyShape {
 	 * MyShape
 	 * 
 	 * @param h
-	 *            -- height int
+	 *            -- height of shape
 	 * @param w
-	 *            -- width int
+	 *            -- width of shape
 	 */
 	public MyShape(int h, int w) {
 		height = h;
@@ -53,9 +55,19 @@ public abstract class MyShape {
 	public String getName() {
 		return "shape";
 	}
-	
-	public abstract double getArea( );
-	
-	public abstract double getPerimeter( );
+
+	/**
+	 * Returns the area of the MyShape object
+	 * 
+	 * @return
+	 */
+	public abstract double getArea();
+
+	/**
+	 * Returns the perimeter of the MyShape object
+	 * 
+	 * @return
+	 */
+	public abstract double getPerimeter();
 
 }

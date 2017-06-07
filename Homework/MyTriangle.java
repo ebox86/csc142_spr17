@@ -1,32 +1,34 @@
 /**
  * MyTriangle -- creates a new MyTriagne object as a child of MyShape
+ * 
  * @author evan kohout
  *
  */
-public class MyTriangle extends MyShape{
+public class MyTriangle extends MyShape {
 
 	// ~~ constructor ~~ //
-	
+
 	/**
 	 * constructs the MyTriangle object
-	 * @param h -- height of the triangle
-	 * @param w -- width of the triangle
+	 * 
+	 * @param h
+	 *            -- height of the triangle
+	 * @param w
+	 *            -- width of the triangle
 	 */
 	public MyTriangle(int h, int w) {
 		super(h, w);
-		// TODO Auto-generated constructor stub
 	}
 
 	// ~~ accessors ~~ //
-	
+
 	/**
 	 * Returns the area of the MyTriangle object
 	 */
 	public double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 0.5 * width * height;
 	}
-	
+
 	/**
 	 * Returns the name of the shape
 	 */
@@ -34,10 +36,10 @@ public class MyTriangle extends MyShape{
 		return "triangle";
 	}
 
-	@Override
 	public double getPerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		double hypotenuse = Math.pow(Math.pow(width, 2) + Math.pow(height, 2), 0.5);
+		return width + height + hypotenuse;
+
 	}
 
 }

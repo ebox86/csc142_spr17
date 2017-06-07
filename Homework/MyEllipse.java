@@ -1,31 +1,34 @@
 /**
  * MyEllipse -- creates a MyEllipse object as a child of MyShape
+ * 
  * @author evan kohout
  *
  */
 public class MyEllipse extends MyShape {
 
 	// ~~ constructor ~~ //
-	
+
 	/**
 	 * Constructs the MyEllipse object
-	 * @param a -- major axis of the ellipse
-	 * @param b -- minor axis of the ellipse
+	 * 
+	 * @param a
+	 *            -- major axis of the ellipse
+	 * @param b
+	 *            -- minor axis of the ellipse
 	 */
 	public MyEllipse(int a, int b) {
 		super(a, b);
 	}
 
 	// ~~ accessors ~~ //
-	
+
 	/**
 	 * Returns the area of the MyEllipse object
 	 */
 	public double getArea() {
-		double area = (1/4) * Math.PI * (height * width);
-		return area;
+		return 0.25 * Math.PI * (height * width);
 	}
-	
+
 	/**
 	 * Returns the name of the shape
 	 */
@@ -33,10 +36,11 @@ public class MyEllipse extends MyShape {
 		return "ellipse";
 	}
 
-	@Override
+	/**
+	 * Returns the perimeter of the ellipse
+	 */
 	public double getPerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 0.5 * Math.PI * ((3 * (height * width)) - Math.sqrt((3 * height + width) * (height + 3 * width)));
 	}
 
 }
