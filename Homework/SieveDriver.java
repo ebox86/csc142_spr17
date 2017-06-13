@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class SieveDriver {
    
@@ -9,6 +9,7 @@ public class SieveDriver {
    
    public SieveDriver(){
 	   scan = new Scanner(System.in);
+	   theSieve = new MySieve();
    }
    
    
@@ -29,7 +30,8 @@ public class SieveDriver {
    
    public void printPrimes(int bound, java.util.List<Integer> list) {
       System.out.println("The primes up to N are:");
-      for(Integer n : list) System.out.print(n + " ");
+      Iterator<Integer> it = list.iterator();
+      while (it.hasNext()) System.out.print(it.next() + " ");
       System.out.println();
       System.out.println();
    }
