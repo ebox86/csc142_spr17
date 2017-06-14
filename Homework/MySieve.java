@@ -7,11 +7,26 @@ import java.util.*;
  */
 public class MySieve implements Sieve {
 
-	private ArrayList<Integer> numberList = new ArrayList<Integer>();
-	private ArrayList<Integer> primeList = new ArrayList<Integer>();
-	private int currentPrime = 0;
+	// ~~ fields ~~ //
 	
+	private ArrayList<Integer> numberList;
+	private ArrayList<Integer> primeList;
+	private int currentPrime;
+	
+	/**
+	 * getPrimes -- implementation logic for Sieve interface, returns prime numbers
+	 * up to a given value of n
+	 * 
+	 * @param n -- a non-negative, non-zero integer value
+	 * @return primeList -- an ArrayList object containing all prime numbers between 2 and n
+	 */
 	public List<Integer> getPrimes(int n) {
+		// initialize list objects and currentPrime
+		numberList = new ArrayList<Integer>();
+		primeList = new ArrayList<Integer>();
+		currentPrime = 0;
+		// if n is 1, return empty list as there are no primes to find
+		if (n == 1) return primeList;
 		for(int i = 2; i <= n; i++) numberList.add(i);
 		currentPrime = numberList.get(0);
 		double m = Math.sqrt(n);
