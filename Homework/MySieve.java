@@ -35,10 +35,17 @@ public class MySieve implements Sieve {
 		return primeList;
 	}
 	
+	// internal loop used by the alg to calculate primes based on the current 
+	// value of currentPrime
+	//
 	private void loop(){
+		// set currentPrime to first (lowest) value of numberList
 		currentPrime = numberList.get(0);
+		// remove that value
 		numberList.remove(0);
+		// for each item in numberList, see if each number is divisible by currentPrime, if so remove it
 		for(int i = 0; i < numberList.size(); i++) if (numberList.get(i) % currentPrime == 0) numberList.remove(i);
+		// add the currentPrime to primeList, because it is a prime number
 		primeList.add(currentPrime);
 	}
 
